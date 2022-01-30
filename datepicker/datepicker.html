@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+	<title>From the author's books</title>
+</head>
+<body>
+
+
+
+<!--CSS-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<style type="text/css">
+	body{
+		background-color: lightblue;
+	}
+</style>
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+<!--HTML-->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<div>
+	<table border="4px red">
+		<div>
+			<tr>
+				<td>
+					<input type="" placeholder="Datepicker (100px height)" class="date" name="">
+		</div>
+		<div>
+					<td>
+					<input type="" name="" placeholder="Datepicker (300px width)" class="datepicker">
+		</div>
+		<div>		<td>
+						<input class="inut" type="" name="">
+					</td>
+		</div>
+					</td>
+		</div>
+				</td>
+			</tr>
+		</div>
+	
+
+	<!--<div class="dialog">Green color of this dialog<br>was done by the JQuery UI</div>-->
+	<div class="files-upload-successfully"></div>
+
+	<div class="selector"></div>
+</div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+		
+<!-------------------------------------------------------------------------------------------------------------------------
+JAVASCRIPT--------------------------------------->
+<!--The core JQuery----------------------------------------------------------------------------------------------------------------->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+
+
+<!--Sample scripts----------------------------------------------------------------------------------------------------------------------------->
+
+<script type="text/javascript">
+//Datepicker event............................................
+$(".date").datepicker().height("100px");
+
+$(".datepicker").datepicker().width("300");
+</script>
+
+<script type="text/javascript">
+//Adding event to the body...  NB// Dialog is exceptional.....
+$(".inut").datepicker().appendTo("body");
+</script>
+
+<script type="text/javascript">
+//UNUSED SCRIPTS..............................................
+
+
+</script>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+</table>
+</body>
+</html>
