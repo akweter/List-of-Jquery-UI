@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Complete Appointment Form</title>
 
-	<link href="../css/jquery-ui.css" rel="stylesheet">
+	<link href="../css/jquery-ui.css" rel="stylesheet"> 
 
 	<style>
 		* { box-sizing: border-box; }
@@ -125,7 +125,7 @@
 		}
 	});
 
-	$( "#days" ).spinner({ min: 1 });
+	$( "#days" ).spinner({ min: 1 }); 
 
 	$( "form" ).on( "submit", function( event ) {
 		var date,
@@ -134,7 +134,7 @@
 		try {
 			date = $.datepicker.parseDate( "mm/dd/yy",
 			  $( "#date" ).val() );
-		} catch ( error ) { }
+		} catch ( error ) { } 
 
 		if ( !date ) {
 			event.preventDefault();

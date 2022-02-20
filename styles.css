@@ -1,3 +1,241 @@
-body{
-    background: rgb(109, 59, 59);
+
+/*INDEX.HTML********************************************************************* ***************************/
+/*body{background-color: rgb(167, 217, 230);}
+
+.navbar{
+    background: conic-gradient( rgb(226, 205, 113), rgb(39, 179, 214), rgb(27, 189, 27));
 }
+
+.jumbotron{
+    min-height: 400px;
+    text-align: center;
+    text-decoration: overline;
+    text-decoration-color: rgb(12, 159, 196);
+    text-decoration-style: dashed;
+    color: rgb(245, 38, 228);
+}
+
+.contact-header{
+    background: linear-gradient(to top, #aaa7a773, rgb(73, 168, 164), rgba(158, 209, 154, 0.473));
+}
+*/
+
+/*ALL PAGES****************************************************************************************************/
+
+.row-header{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+/**************************************************************************************************************/
+
+
+  .main{
+      margin-top: 70px;
+      min-height: 450px;
+  }
+  .navbar-dark {
+    background-color: purple;
+    color: white;
+    }
+  
+  .navbar-link{
+    color: gold;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+  
+  .jumbotron{
+      margin-top: 50px;
+    min-height: 300px;
+ }
+  
+  
+  .row-header {
+    margin: 0px auto;
+    padding: 0px 0px; }
+  
+  .row-content {
+    margin: 0px auto;
+    padding: 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 300px; }
+  
+  .footer {
+    background-color: violet;
+    margin: 0px auto;
+    padding: 20px 0px; }
+  
+  
+  
+  address {
+    font-size: 16;
+    margin: 0px;
+    color: #0f0f0f; }
+  
+  .tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+  
+  .modal-body {
+    background-color: #d4bad4; }
+  
+  .modal-header {
+    background-color: #4b2d9e;
+    color: white; }
+  
+  .close {
+    color: #ffffff; }
+  
+  .accordion-btn {
+    float: right; }
+  
+/*TABLE FORM*/
+.ui-dialog p {
+  display: none;
+}
+.admin-dialog p {
+  display: block;
+}
+.admin-dialog form {
+  display: none;
+}
+.ui-dialog label {
+  display: block;
+}
+.admin-dialog button:first-child {
+  display: none;
+}
+table {
+  border: 2px rgb(149, 53, 179) dashed;
+  border-collapse: collapse;
+  width: 50%;
+}
+th {
+  border-bottom: 2px solid rgb(212, 138, 125);
+}
+td, th {
+  padding: 1em 2em;
+  text-align: left;
+}
+/*table tr:nth-child(even),*/ #tr {
+  background: rgb(188, 233, 158);
+}
+/**************************************************************************************************************/
+
+/*CONTACT.HTML************************************************************************/
+
+.contact-jumbotron{
+  text-align: center;
+  font-weight: bolder;
+  font-size: xx-large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: cadetblue;
+}
+
+* { box-sizing: border-box; }
+fieldset { padding: 1em; }
+label {
+    display: block;
+    margin: 1em 0 0 0;
+}
+#buttonset {
+    display: inline-block;
+    margin-top: 0.3em;
+}
+span label {
+    display: inline-block;
+    margin: 0; 
+}
+select, input[type="text"], .ui-spinner, fieldset > div > button {
+    width: 250px;
+    font-size: 1.1em;
+}
+.ui-buttonset .ui-button { width: 125px; }
+input[type="text"] { padding: 0.2em; }
+button { margin-top: 1em; }
+.ui-selectmenu-button { margin-top: 0.2em; }
+.ui-selectmenu-button span.ui-selectmenu-text {
+    padding: 0.2em 0 0.2em 1em;
+}
+/****************************************************************************************************************/
+
+
+/*ABOUT.HTML***************************************************************************************************/
+#accordion-1-about,
+#accordion-2-about,
+#accordion-3-about
+{
+  background-color: rgb(139, 139, 139);
+}
+
+#form-1-about{
+  background-color: lightgoldenrodyellow;
+}
+
+.fa-angle-down{
+  float: right;
+  color: rgb(34, 37, 7);
+}
+/*
+#tabs li .ui-icon-close {
+  float: left;
+  margin: 0.7em 0.3em 0 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#movie-list {
+  float: left;
+  width: 200px;
+  position: fixed;
+  border-right: 2px solid black;
+  min-height: 100%;
+}
+.ui-tabs {
+  float: left;
+  width: 800px;
+  width: calc( 100% - 300px );
+  margin-left: 250px;
+}
+*/
+.ui-menu {
+  width: 150px;
+}
+
+.ui-progressbar{
+  margin:20px
+}
+
+#composer-1-about{
+  position: absolute;
+  left: 200px;
+}
+
+.ui-button.primary{
+  background-color: green;
+  color: white;
+}
+
+#message-1-about{
+font-size: 1em;
+width: 250px;
+height: 100px;
+}
+
+#settingsDialog-1-about{
+margin: 0;
+}
+
+#confirmDelete-1-about{
+margin: 0;
+}
+
+/****************************************************************************************************************/

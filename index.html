@@ -1,102 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
+        <!-- Required meta tags always come first -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge"><meta>
-        <base target="_blank">
-        <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
-        <link rel="stylesheet" type="text/css" href="./styles.css">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <!-- Bootstrap CSS -->
+        <!--build:css css/main.css ---->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="node_modules\font-awesome\css\font-awesome.min.css">
         <link rel="stylesheet" href="node_modules\bootstrap-social\bootstrap-social.css">
-        <title>TRIALS</title>
-    </head>
-    <style>
-        body, input{
-            background-color: rgb(119, 63, 63);
-            color: white;
-        }
-    </style>
-    <body class="container">
-        <header></header>
-        <main>
-            <h1 class="jumbotron">TRIALS</h1> 
-                <h3 row row-header>Autocomplete Forms</h3>
-                <div class="col-12 col-sm-8">
-                    <label for="autocomplete">Labels only</label>
-                    <input type="text" id="autocomplete" name="autocomplte" placeholder="Type a name"></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br>
-                    <label for="autocomplete-with-value">Labels with values</label>
-                    <input type="text" id="autocomplete-with-value" name="autocomplete-with-value" placeholder="Type any county"></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br>
-                    <label for="delay">Delayal of three seconds</label>
-                    <input type="text" id="delay" name="delay" placeholder="Search for a fruit"></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br>
-                    <label for="minLenght">At least two keywords for a search</label>
-                    <input type="text" id="minLenght" name="minLenght" placeholder="Search your pet name"></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br>
-                    <label for="exact-value">No guessing response from sever</label>
-                    <input type="text" id="exact-value" name="exact-value" placeholder="Motivational speakers" width=""></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br>
-                    <label for="repos">GitHub repos extraction</label>
-                    <input type="text" id="repos" name="repos" placeholder="Type your Git repo"></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br> 
-                    <br>
-                    <label for=""></label>
-                    <input type="text" id="" name="" placeholder=""></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <input type="text" id="" name="" placeholder=""></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <input type="text" id="" name="" placeholder=""></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br>
-                    <label for=""></label>
-                    <input type="text" id="" name="" placeholder=""></input>
-                    <button type="submit" role="button" class="btn btn-success btn-sm">Search</button>
-                    <br>
-                    <br><!--
-                    <button>button</button>
-                    <input type="button" value="button">
-                    <input type="reset" value="reset">
-                    <input type="submit" value="submit">
-                    <label for="checkbox">checkbox</label>
-                    <input type="checkbox" id="checkbox">
-                    <label for="radio">radio</label>
-                    <input type="radio" id="radio">
-                    -->
-                </div>
-                
+        <link rel="stylesheet" href="./styles.css">
+        <!-- endbuild -->
 
-            
-            
-        </main>
-        <footer></footer>
+    <title>Homepage</title>
+</head> 
+<body  onload="startTime()">
+    <!--NAVIGATION-->
+      
+            <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="./james.jpg" width="40" height="41">LOGO</a>
+                    <div class="collapse navbar-collapse" id="Navbar">
+                        <h5 id="txt" class="nav-item active nav-link offset-3"></h5>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item p-2"><a class="navbar-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                            <li class="nav-item p-2"><a class="navbar-link" href="./about.html"><span class="fa fa-list fa-lg"></span> About Us</a></li>
+                            <li class="nav-item p-2"><a class="navbar-link" href="./contact.html"><span class="fa fa-phone-square fa-lg"></span> Contact</a></li>
+                            <li class="nav-item p-2"><a class="navbar-link" href="https://wa.me/message/D4NGNTNZFPX2C1" target="_blank"><span class="fa fa-whatsapp fa-lg"></span> Whatsapp</a></li>
+                        </ul>
+                    </div>
+
+    <!--MODAL-->
+                    <span class="navbar-text"><a data-toggle="modal" href="#" data-target="#LoginModal">
+                        <span class="btn btn-success"> Sign up</span></a>
+                    </span>
+                </div>
+            </nav>
+            <div id="LoginModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="content">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Sign up</h3>
+                            <button type="button" class="btn-close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-sm-4">
+                                        <label for="EmailAdd" class="form-label"></label>
+                                        <input type="text" name="EmailAdd" width="60" required="required" placeholder="Enter Email">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label for="PassWD"></label>
+                                        <input type="Password" name="PassWD" required="required" placeholder="Enter Password">
+                                    </div>
+                                    <div class="form-group col-auto">
+                                        <input type="checkbox" name="checkbox">
+                                        <label for="checkbox" class="form-group">Remember me</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="ml-auto">
+                                        <button role="button" class="btn btn-success">Submit</button>
+                                    </div>
+                                    <div class="ml-1">
+                                        <button role="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <header>
+        <main>
+
+    <!--JUMBOTROM-->
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row row-header">
+                    <div class="col col-sm-6">
+                        <h1>JQUERY</h1>
+                    <h3>Write less do more...</h3>
+                    </div>
+                    <div class="col-12 col-sm-3 offset-sm-2">
+                        <strong>Click <a href="./contact.html"><kbd>here</kbd></a> to learn more...</strong>
+                    </div>
+                </div>
+        </header>
+
+        <main class="main">
         
-    <script src="./js/jquery.js"></script>
-    <script src="./js/jquery-ui.js"></script>
-    <script src="trials.js"></script>		
-    <script	src="node_modules/tether/dist/js/tether.min.js"></script>			
-    <script	src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
-    <script></script>
-    </body>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-sm-2">
+                        <h5></h5>
+                        <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-8 col-sm-4">
+                        <h5>Our Address</h5>
+                        <address>
+                            Osidade Rd<br>
+                            Kwame Nkrumah circle<br>
+                            Acra Ghana<br>
+                        <i class="fa fa-phone"><a href="tel:+233540544760"></i> Telephone:</a><br>
+                        <i class="fa fa-fax"><a href="tel: +233245152082"></i> Fax:</a><br>
+                        <i class="fa fa-envelope"><a href="mailto:jamesakweter@gmail.com"></i> Email:</a>
+                        </address>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i> </a>
+                        <a href="" class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook fa-lg"></span></a>
+                        <a href="" class="btn btn-social-icon btn-linkedin"><span class="fa fa-linkedin fa-lg"></span></a>
+                        <a href="" class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter fa-lg"></span></a>
+                        <a href="" class="btn btn-social-icon btn-google"><span class="fa fa-youtube fa-lg"></span></a>
+                        <a href="" class="btn btn-social-icon btn-twitter"><span class="fa fa-envelope fa-lg"></span></a>
+                    </div>
+                </div>
+
+
+                <div class="row row-align-center">
+                    <a class="col-2 col-sm-2" href="#"><span class="btn btn-success">Scroll up <i class="fa fa-paper-plane fa-sm"> </i></span></a>
+                    <div class="col-8 col-sm-5 offset-sm-3 align-items-center">© Copyright 2022 Akweter</div>
+                </div>
+            </div>
+
+        </footer> 
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+        <!-- build:js js/main.js -->
+        <script src="./js/jquery.js"></script>
+        <script src="./js/jquery-ui.js"></script>
+        <script src="./trials.js"></script><!----
+        <script	src="node_modules/jquery/dist/jquery.min.js"></script>				
+        <script	src="node_modules/tether/dist/js/tether.min.js"></script>				
+        <script	src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>---->
+       <!-- endbuld -->
+</body>
 </html>

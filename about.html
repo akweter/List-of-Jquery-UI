@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <!-- Bootstrap CSS -->
+        <!--build:css css/main.css ---->
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="styleshett" href="./css/jquery-ui.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <!-- endbuild -->
+
+    <title>About</title>
+</head> 
+<body  onload="startTime()">
+    <!--NAVIGATION-->
+        <div class="container">      
+            <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="./james.jpg" width="40" height="41">LOGO</a>
+                    <div class="collapse navbar-collapse" id="Navbar">
+                        <h5 id="txt" class="nav-item active nav-link offset-3"></h5>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item p-2"><a class="navbar-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                            <li class="nav-item p-2"><a class="navbar-link" href="#"><span class="fa fa-list fa-lg"></span> About Us</a></li>
+                            <li class="nav-item p-2"><a class="navbar-link" href="./contact.html"><span class="fa fa-phone-square fa-lg"></span> Contact</a></li>
+                            <li class="nav-item p-2"><a class="navbar-link" href="https://wa.me/message/D4NGNTNZFPX2C1" target="_blank"><span class="fa fa-whatsapp fa-lg"></span> Whatsapp</a></li>
+                        </ul>
+                    </div>
+            </nav>
+        </div>
+
+        <main class="main">
+
+                <header class="jumbotron contact-jumbotron">
+                    <span class="about-jumbotron">About page is all about the content</span>
+                </header>
+            <div class="container">
+                    <h3>Our History...</h3>
+                <div class="row row-content">
+                    <div class="col-12 col-sm-4">
+                        <div id="accordion-1-about">
+                            <h4>Ghostbusters <i class="fa fa-angle-down"></i></h4>
+                            <div>
+                                <p>Ghostbusters is a 1984.....</p>
+                            </div>
+                            <h4>Titanic <i class="fa fa-angle-down"></i></h4>
+                            <div>
+                                <p>Titanic is a 1997 epic....</p>
+                            </div>
+                            <h4>Top Gun <i class="fa fa-angle-down"></i></h4>
+                            <div>
+                                <p>Top Gun is a 1986 action....</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div id="accordion-2-about">
+                            <h4>Ghostbusters <i class="fa fa-angle-down"></i></h4>
+                            <div>
+                                <p>Ghostbusters is a 1984..... </p>
+                            </div>
+                            <h4>Titanic<i class="fa fa-angle-down"></i></h4>
+                            <div>
+                                <p>Titanic is a 1997 epic....</p>
+                            </div>
+                            <h4>Top Gun <i class="fa fa-angle-down"></i></h4>
+                            <div>
+                                <p>Top Gun is a 1986 action....</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div id="accordion-3-about">
+                            <h4>One</h4>
+                            <p>The first game...</p>
+                            <h4>Two</h4>
+                            <p>The second game...</p>
+                        </div>
+                        <button id="btn-1-about">One</button>
+                        <button id="btn-2-about">Two</button>
+                    </div>
+                </div>
+                    <h3>Get more from us...</h3>
+                <div class="row row-heading">
+                    <div class="col-12 col-sm-6">
+                        <div id="accordion-4-about"></div>
+                        <form id="form-1-about">
+                            <label for="header-1-about"></label><br>
+                            <input type="text" id="header-1-about" placeholder="Message Title" required/>
+                            <label for="content-1-about"></label><br>
+                            <textarea id="content-1-about" placeholder="What is on your mind..."required></textarea>
+                            <br>
+                            <button>New Tab</button>
+                        </form>
+                    </div>
+                    <div class="col-12 col-sm-6 staffing">
+                        <div id="movie-list" class="ui-widget">
+                            <h2>Movie List</h2>
+                            <ul>
+                                <li><a href="movie.php?movie=ghostbusters">Ghostbusters</a></li>
+                                <li><a href="movie.php?movie=titanic">Titanic</a></li>
+                                <li><a href="movie.php?movie=top_gun">Top Gun</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-header">
+                    <div class="col-12 col-sm-4">
+                        <ul id="menu-1-about">
+                            <span class="fa fa-star fa-sm"></span> Star
+                            
+                            <li>Options
+                                <ul>
+                                    <li>One</li>
+                                    <li>Two</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div id="composer-1-about">
+                            <h3>Message</h3>
+                            <textarea id="message-1-about"></textarea>
+                        </div>
+                        <ul id="menu-2-about">
+                            <li>
+                                <span class="ui-icon fa fa-folder-open-o"></span> Load
+                            </li>
+                            <li class="ui-state-disabled" id="save-option-1">
+                                <span class="fa fa-save fa-sm"></span> Save
+                            </li>
+                            <li></li>
+                            <li>
+                                <span class="fa fa-cog fa-sm"></span> Settings
+                            </li>
+                            <li>
+                                <span class="fa fa-sm fa-trash"></span> Delete
+                            </li>
+                        </ul>
+
+                        <div id="confirmDelete-1-about">
+                            <p>Are you <strong>sure</strong> you want to delete your message</p>
+                        </div>
+
+                        <div id="settingsDialog-1-about">
+                            <p>Font Size:</p>
+                            <div id="slider-1-about"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 col-sm-2">
+                            <h5></h5>
+                            <ul class="list-unstyled">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-8 col-sm-4">
+                            <h5>Our Address</h5>
+                            <address>
+                                Osidade Rd<br>
+                                Kwame Nkrumah circle<br>
+                                Accra Ghana<br>
+                            <a class="fa fa-phone" href="tel:+233540544760"> Telephone:</a><br>
+                            <a class="fa fa-fax" href="tel: +233245152082"> Fax:</a><br>
+                            <a class="fa fa-envelope" href="">Email: </a>
+                            </address>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i> </a>
+                            <a href="" class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook fa-lg"></span></a>
+                            <a href="" class="btn btn-social-icon btn-linkedin"><span class="fa fa-linkedin fa-lg"></span></a>
+                            <a href="" class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter fa-lg"></span></a>
+                            <a href="" class="btn btn-social-icon btn-google"><span class="fa fa-youtube fa-lg"></span></a>
+                            <a href="" class="btn btn-social-icon btn-twitter"><span class="fa fa-envelope fa-lg"></span></a>
+                        </div>
+                    </div>
+    
+    
+                    <div class="row row-align-center">
+                        <a class="col-2 col-sm-2" href="#"><span class="btn btn-success">Scroll up <i class="fa fa-paper-plane fa-sm"> </i></span></a>
+                        <div class="col-8 col-sm-5 offset-sm-3 align-items-center">© Copyright 2022 Akweter</div>
+                    </div>
+                </div>
+           
+        </footer> 
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+        <!-- build:js js/main.js -->
+        <script src="./js/jquery.js"></script>
+        <script src="./js/jquery-ui.js"></script>
+        <script src="./trials.js"></script>
+        <script src=""></script>
+        <script src=""></script>
+        <script src=""></script>
+        <script src=""></script>
+        <!-- endbuld -->
+    </body>
+    </html>
