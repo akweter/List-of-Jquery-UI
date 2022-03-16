@@ -22,11 +22,15 @@
 
 /*ALL PAGES****************************************************************************************************/
 
-.row-header{
-  margin-top: 100px;
-  margin-bottom: 100px;
+h5{
+  text-align: center;
+  color: red
 }
 
+
+.col-12{
+  border: 1.5px solid rgb(53, 172, 172);
+}
 
 /**************************************************************************************************************/
 
@@ -53,11 +57,6 @@
     min-height: 300px;
  }
   
-  
-  .row-header {
-    margin: 0px auto;
-    padding: 0px 0px; }
-  
   .row-content {
     margin: 0px auto;
     padding: 50px 0px;
@@ -73,8 +72,7 @@
   
   address {
     font-size: 16;
-    margin: 0px;
-    color: #0f0f0f; }
+  }
   
   .tab-content {
     border-left: 1px solid #ddd;
@@ -85,10 +83,27 @@
   .modal-body {
     background-color: #d4bad4; }
   
+    .row-header{
+      margin-top: 100px;
+    }
+
   .modal-header {
     background-color: #4b2d9e;
     color: white; }
   
+    .ui-progressbar {
+      margin-top: 20px;
+    }
+		.ui-menu {
+      width: 150px;
+    }
+    
+		.ui-button.primary {
+			background: green;
+			color: white;
+		}
+    
+
   .close {
     color: #ffffff; }
   
@@ -168,21 +183,11 @@ button { margin-top: 1em; }
 
 
 /*ABOUT.HTML***************************************************************************************************/
-#accordion-1-about,
-#accordion-2-about,
-#accordion-3-about
-{
-  background-color: rgb(139, 139, 139);
-}
-
-#form-1-about{
-  background-color: lightgoldenrodyellow;
-}
 
 .fa-angle-down{
   float: right;
-  color: rgb(34, 37, 7);
 }
+
 /*
 #tabs li .ui-icon-close {
   float: left;
@@ -192,13 +197,7 @@ button { margin-top: 1em; }
   cursor: pointer;
 }
 
-#movie-list {
-  float: left;
-  width: 200px;
-  position: fixed;
-  border-right: 2px solid black;
-  min-height: 100%;
-}
+
 .ui-tabs {
   float: left;
   width: 800px;
@@ -214,28 +213,89 @@ button { margin-top: 1em; }
   margin:20px
 }
 
-#composer-1-about{
-  position: absolute;
-  left: 200px;
-}
-
 .ui-button.primary{
   background-color: green;
   color: white;
 }
 
-#message-1-about{
-font-size: 1em;
-width: 250px;
-height: 100px;
+
+.nothing-much{
+  background-color: rgb(255, 236, 255);
 }
 
-#settingsDialog-1-about{
-margin: 0;
+/******For the progress bar in the about page************/
+
+.ui-button {
+  margin-top: 1em;
 }
 
-#confirmDelete-1-about{
-margin: 0;
+/*PROGRESS BAR*/
+.ui-progressbar {
+  position: relative;
+}
+#progressbar-label {
+position: absolute;
+left: 20%;
+top: 4px;
+font-weight: bold;
+}
+
+#progressbarBtn{
+  background-color: rgb(194, 47, 47);
+  color: rgb(231, 225, 225);
+}
+/*********************************/
+.ui-slider {margin: 2em;}
+/*********************************/
+
+/* MESSAGE COMPOSER*//*
+.ui-progressbar { margin-top: 20px; }
+		.ui-menu { width: 150px; }
+		#composer {
+			position: absolute;
+			left: 200px;
+		}
+		.ui-button.primary {
+			background: green;
+			color: white;
+		}
+		#message {
+			font-size: 1em;
+			width: 250px;
+			height: 100px;
+		}
+*/
+
+#simple-draggable-1{
+  background-color: rgb(107, 204, 123);
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+#simple-draggable-2{
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+}
+#fault-h5{
+  color: white;
+}
+#fault-c{
+  background-color: red;
+  color: red;
+}
+/*************************/
+
+#x1{
+  width: 60px;
+  height: 60px;
+  background-color: rgb(235, 216, 52);
+  margin: 10px;
+}
+#y1{
+  width: 60px;
+  height: 60px;
+  background-color: rgb(211, 44, 175);
 }
 
 /****************************************************************************************************************/

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="./styles.css">
         <!-- endbuild -->
 
-    <title>Homepage</title>
-</head> 
-<body  onload="startTime()">
+        <title>Homepage</title>
+    </head> 
+    <body  onload="startTime()">
     <!--NAVIGATION-->
       
             <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
@@ -38,7 +38,7 @@
 
     <!--MODAL-->
                     <span class="navbar-text"><a data-toggle="modal" href="#" data-target="#LoginModal">
-                        <span class="btn btn-success"> Sign up</span></a>
+                        <span class="btn btn-success">Newsletter</span></a>
                     </span>
                 </div>
             </nav>
@@ -46,31 +46,32 @@
                 <div class="modal-dialog modal-lg" role="content">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 class="modal-title">Sign up</h3>
+                            <h3 class="modal-title">Get latest news update</h3>
                             <button type="button" class="btn-close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
+
                             <form>
-                                <div class="form-row">
+                                <div class="form-row Newsletter-form">  
                                     <div class="form-group col-sm-4">
                                         <label for="EmailAdd" class="form-label"></label>
-                                        <input type="text" name="EmailAdd" width="60" required="required" placeholder="Enter Email">
+                                        <input type="text" name="EmailAdd" width="60" required="required" placeholder="Email">
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="PassWD"></label>
-                                        <input type="Password" name="PassWD" required="required" placeholder="Enter Password">
+                                        <input type="Password" name="PassWD" required="required" placeholder="Password">
                                     </div>
                                     <div class="form-group col-auto">
                                         <input type="checkbox" name="checkbox">
-                                        <label for="checkbox" class="form-group">Remember me</label>
+                                        <label for="checkbox" class="form-group">Daily Updates</label>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="ml-auto">
-                                        <button role="button" class="btn btn-success">Submit</button>
+                                        <button role="button" class="btn btn-success">Update</button>
                                     </div>
                                     <div class="ml-1">
-                                        <button role="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                        <button role="button" class="btn btn-danger" data-dismiss="modal">Later</button>
                                     </div>
                                 </div>
                             </form>
@@ -128,7 +129,7 @@
                         <a href="" class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter fa-lg"></span></a>
                         <a href="" class="btn btn-social-icon btn-google"><span class="fa fa-youtube fa-lg"></span></a>
                         <a href="" class="btn btn-social-icon btn-twitter"><span class="fa fa-envelope fa-lg"></span></a>
-                    </div>
+                    </div> 
                 </div>
 
 
@@ -143,12 +144,12 @@
         <!-- build:js js/main.js -->
         <script src="./js/jquery.js"></script>
         <script src="./js/jquery-ui.js"></script>
-        <script src="./trials.js"></script><!----
+        <script src="./trials.js"></script>
         <script	src="node_modules/jquery/dist/jquery.min.js"></script>				
         <script	src="node_modules/tether/dist/js/tether.min.js"></script>				
         <script	src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>---->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
        <!-- endbuld -->
-</body>
+    </body>
 </html>

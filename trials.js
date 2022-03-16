@@ -223,9 +223,9 @@
        ///CONTACT.HTML///////////////////////////////////////////////////////////////////////////////////////////////////
        //TIMETABLE FORM FOR CLASSROW IN index.html..
        $( "#dialog" ).dialog({
-        autoOpen: false,
+        autoOpen: false,  
         buttons: {
-            Update: function() {
+            Update: function() { 
                 var firstName = $( "#firstName" ).val(),
                     lastName = $( "#lastName" ).val(),
                     row = $( this ).data( "editingRow" );
@@ -257,7 +257,8 @@
             .data( "editingRow", row )
             .dialog( "open" ); 
     });
-    
+/////////////////////////////////////////////////////////
+
     //DOCTORS APPOINTMENT FORM IN THE contact.html...
        $( "#buttonset" ).buttonset();
        $( "[name='language']" ).on( "change", function() {
@@ -290,7 +291,7 @@
                primary: "ui-icon-calendar"
            }
        });
-   
+
        $( "#days" ).spinner({ min: 1 }); 
    
        $( "#doctors-form-contact").on( "submit", function( event ) {
@@ -315,9 +316,12 @@
                alert( "Please provide a valid number of days." );
            }
        });
-    //////////////////////////////////////////////////////////////////////////////////////////////
+       $(".Newsletter-form").on("submit", function(){
+           document.write();
+       });
+    //////////////////////////////////////////////
 
-    ////ALL PAGES////////////////////////////////////////////////////////////////////////////
+    ////ALL PAGES////////////////////////////////
     //TIME RENDERING
        function startTime() {
         var today = new Date();
@@ -334,13 +338,16 @@
         if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
         return i;
       }
-    /////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////
        
-    ////ABOUT.HTML////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////ABOUT.HTML//////////
+
     //ACCORDION
     $("#accordion-1-about").accordion({ active:true /*collapsible:true*/ });
+    ////////////////////////////////////////////////
 
     $("#accordion-2-about").accordion({collapsible: false});
+    ////////////////////////////////////////////////
 
     $("#accordion-3-about").accordion({active:true});
     $("#btn-1-about").on("click", function() {
@@ -350,7 +357,9 @@
     $("#btn-2-about").on("click", function() {
         $("#accordion-3-about").accordion("option", "active", 1);
     });
+    /////////////////////////////////////////////////
 
+    //ACCORDING NEW TABS
     var newAccordion = $("#accordion-4-about").accordion();
     $("#form-1-about").on("submit", function(event){
         event.preventDefault();
@@ -359,96 +368,57 @@
             "<div>" + $("#content-1-about").val() + "</div>"
             ).accordion("refresh");this.reset();
     });
- 
-    //STAFFING (SO FAR HIDDEN WITHOUT DATA IN THE MAIN ABOUT PAGE...)
-    
-    var tabs = $( "#tabs" ).tabs();
+    ////////////////////////////////////////////////
 
-	$( "#movie-list" ).on( "click", "a", function( event ) {
-		event.preventDefault();
+    //PROGRESS BAR
+    $("#progressbar-1-about").progressbar();
 
-		var index,
-			movie = this.innerHTML,
-			existing = tabs.find( "[data-movie='" + movie + "']" );
+    var button = $("#progressbarBtn").button().on('click', function(){
+        var value = $("#progressbar-1-about").progressbar('value');
 
-		if ( existing.length == 0 ) {
-			tabs.find( ".ui-tabs-nav" )
-				.append( "<li data-movie='" + movie + "'>" +
-				  "<a href='" + this.href + "'>" + movie + "</a>" +
-				  "<button class='ui-icon ui-icon-close'>" +
-				  "Remove Tab</button>" +
-				  "</li>" );
-			tabs.tabs( "refresh" );
-		}
+        value += 2;
+        $("#progressbar-1-about").progressbar('value', value );
+        $("#progressbar-label-1-about").html(value + "%");
+        if ( value === 10){
+            button.button("disable");
+        }
+    });
+    /////////////////////////////////////////////////
 
-		existing = tabs.find( "[data-movie='" + movie + "']" );
-		index = tabs.find( ".ui-tabs-nav li" ).index( existing );
-		tabs.tabs( "option", "active", index );
-	});
-
-	tabs.on( "click keydown", ".ui-icon-close", function( event ) {
-		if ( event.type === "keydown" && !( 
-		  event.keyCode === $.ui.keyCode.ENTER ||
-		  event.keyCode === $.ui.keyCode.SPACE ) ) {
-			return;
-		}
-		var panelId = $( this ).closest( "li" ).remove()
-			.attr( "aria-controls" );
-		$( "#" + panelId ).remove();
-		tabs.tabs( "refresh" );
-	});
-
-
-
+    //MENU
     $("#menu-1-about").menu();
+    //////////////////////////////////////////////////
 
-    $("#menu-2-about").menu({
-        select: function(event, ui){
-            var selection = $.trim(ui.item.text() ),
-            message = $("#message-1-about").val();
-
-            switch ( selection ) {
-                case "Load":
-                    message = localStorage.getItem("message");
-                    $("#message-1-about").val(message);
-                    break;
-                case "Save":
-                    localStorage.setItem( "message", message);
-                    break;
-                    $("#message-1-about").val( "" );
-                    localStorage.removeItem ("message", "" );
-                break;
-            }
-        }
+    //Menu Previewing
+    $("#movie-list-2").on("click", "a", function(event){
+        event.preventDefault();
     });
 
-    $("#message-1-about").on("keyup", function(){
-        var message = $(this).val();
-        if (message.lenght === 0) {
-            $("#save-option-1").addClass ("ui-state-disabled" );
-        }
-        else{
-            $("#save-option-1").removeClass("ui-state-disabled" );
-        }
-        menu.menu("refresh");
-    });
+    var index,
+    movie = this.innerHTML,
+    existing = tabs.find( "[data-movie='" + movie  + "']");
 
-/*
-    $( "#confirmDelete" ).dialog({
+    if (existing.lenght == 0){
+        tabs.find(".ui-tabs-nav").append( "<li data-movie='" + movie + "' >" + "<a href='" + this.href + "'>" + movie + "</a>" +
+        "<button class=='ui-icon ui-icon-close'>" + "Remove Tab </button>" + "</li>" ); tabs.tabs("refresh");
+    }
+    ///////////////////////////////////////////////////
+
+    //DELEGATED TOOLTIP
+    $("#tooltip-1-about").tooltip({content: "<strong>Hi!</strong>"});
+   //////////////////////////////////////////////////////
+
+    //MESSAGE COMPOSER
+    /*$("#confirmDelete-1-about").dialog({
         autoOpen: false,
         buttons: [
             {
                 text: "Cancel",
-                click: function() {
-                    $( this ).dialog( "close" );
-                }
-            },
+                click: function(){$(this).dialog("close");}},
             {
                 text: "Yeah, Let's Do It",
-                click: function() {
-                    deleteMessage();    
-                    $( this ).dialog( "close" );
-                },
+                click: function(){deleteMessage();
+                $(this).dialog("close");},
                 class: "primary"
             }
         ],
@@ -456,206 +426,87 @@
         modal: true
     });
 
-    $( "#settingsDialog" ).dialog({
-        autoOpen: false,
-        title: "Settings"
-    });
-    $( "#slider" ).slider({
+    $("#settingsDialog-1-about").dialog({
         range: "min",
         value: 1,
         min: 0.5,
         max: 2.5,
         step: 0.1,
-        slide: function( event, ui ) {
-            $( "#message" ).css( "font-size", ui.value + "em" );
-        }
-    });
-
-    function loadMessage() {
-        var message,
-            dialog = $( "<div>" ).dialog({
-                modal: true,
-                title: "Loading..."
-            }),
-            progressbar = $( "<div>" ).progressbar({ value: false });
-        
-        dialog.append( progressbar );
-        setTimeout(function() {
-            dialog.remove();
-            message = localStorage.getItem( "message" );
-            $( "#message" ).val( message );
-        }, Math.random() * 5000 );
-    };
-
-    $( "#menu li:first" ).tooltip({
-        content: function() {
-            var message = localStorage.getItem( "message" );
-            if ( message && message.length > 20 ) {
-                return message.substring( 0, 20 ) + "...";
-            } else {
-                return message;
-            }
-        },
-        show: { delay: 300 },
-        items: "*",
-        position: {
-            my: "left center",
-            at: "right center"
-        }
-    });
-
-    function deleteMessage() {
-        $( "#message" ).val( "" );
-        localStorage.removeItem( "message", "" );
-    };
-
-    var menu = $( "#menu" ).menu({
-        select: function( event, ui ) {
-            var selection = $.trim( ui.item.text() ),
-                message = $( "#message" ).val();
-
-            switch( selection ) {
-                case "Load":
-                    loadMessage();
-                    break;
-                case "Save":
-                    localStorage.setItem( "message", message );
-                    break;
-                case "Settings":
-                    $( "#settingsDialog" ).dialog( "open" );
-                    break;
-                case "Delete":
-                    $( "#confirmDelete" ).dialog( "open" );
-                    break;
-            }
-        }
-    });
-
-    $( "#message" ).on( "keyup", function() {
-        var message = $( this ).val();
-        if ( message.length === 0 ) {
-            $( "#save-option" ).addClass( "ui-state-disabled" );
-        } else {
-            $( "#save-option" ).removeClass( "ui-state-disabled" );
-        }
-        menu.menu( "refresh" );
-    });
-
-    $("confirmDelete-1-about").dialog({
-        autoOpen: false,
-        buttons: [{
-            text: "Cancel",
-            click: function(){
-                $(this).dialog("close");
-            }
-        },
-        {
-            text: "Yeah Let's Do It",
-            click: function(){
-                deleteMessage();
-                $(this).dialog("close");
-            },
-            class: "Primary"
-        }
-    ],
-        minWidth: 400,
-        modal: true
-    });
-
-    $("settingsDialog-1-about").dialog({
-        autoOpen: false,
-        title: "Setting"
-    });
-
-    $("#slider-1-about").slider({
-        range: "min",
-        value: 1,
-        min: 0.5,
-        max: 2.5,
-        step: 0.1,
-        slide: function(event, ui){
-            $("#message-1-about").css("font-size", ui.value + "em" );
-        }
+        slide: function(event, ui){$("#textarea-1-about").css("font-size", ui.value + "em");}
     });
 
     function loadMessage(){
         var message,
-        dialog = $("<div>").dialog({
-            modal: true,
-            title: "Loading..."
-        });
-        progressbar = $("div").progressbar({value:false});
+        dialog = $("<div/>").dialog({modal: true, title: "Loading..."}),
+        progressbar = $("<div/>").progressbar({value: false});
 
         dialog.append(progressbar);
-        setTimeout(function(){
-            dialog.remove();
-            message = localStorage.getItem("message");
-            $("#message-1-about").val(message);
-        },
-        Math.random() * 5000 );
+        setTimeout(function(){dialog.remove();
+        message = localStorage.getItem("message");
+        $("#textarea-1-about").val(message);}, Math.random() * 5000 );
     };
 
-    $("#menu-2-about li:first").tootip({
+    $("#menu-1-about #li-1-about").tooltip({
         content: function(){
-            var message = localStorage.getItem("message")
+            var message = localStorage.getItem("message");
             if (message && message.lenght > 20){
                 return message.substring(0, 20) + "...";
-            }
-            else {
+            }else{
                 return message;
             }
         },
-        show: {
-            delay: 300
-        },
+        show: {delay: 300},
         items: "*",
-        position: {
-            my: "left center",
-            at: "right center"
-        }
+        position: {my: "left center", at: "right center"}
     });
 
     function deleteMessage(){
-        $("#message-1-about").val("");
-        localStorage.removeItem("message", "");
+        $("message").val("");localStorage.remove("message", "");
     };
 
-    var menu = $("#menu-2-about").menu({
+    var menu = $("#menu-1-about").menu({
         select: function(event, ui){
-            var selection = $.trim(ui.item.text() ),
-
+            var selection = $trim(ui.item.text() ),
             message = $("message").val();
 
             switch(selection){
-                case "Load":
-                    loadMessage();
-                    break;
-                    case "Save":
-                    localStorage.setItem( "message", message );
-                    break;
-                case "Settings":
-                    $( "#settingsDialog-1-about" ).dialog( "open" );
-                    break;
-                case "Delete":
-                    $( "#confirmDelete-1-about" ).dialog( "open" );
-                    break;
+                case "Load": loadMessage();
+                break;
+                case "Save": localStorage>setItem("message", message);
+                break;
+                case "Setting": $("#settingsDialog-1-about").dialog("eopn");
+                break;
+                case "Delete": $("#confirmDelete-1-about").dialog("open");
+                break;
             }
         }
     });
 
-    $("#message-1-about").on("keyup", function(){
+    $("#textarea-1-about").on("keyup", function(){
         var message = $(this).val();
-        if(message.lenght === 0){
-            $("#save-option-1").addClass(
-                "ui-state-disabled");
+        if (message.lenght === 0){
+            $("#save-option-1").addClass("ui-state-disabled");
         }
         else{
-            $("#save-option-1").removeClass("ui-state-disabled");
+            $("#save-option-1").removeClass("ui-state-disabled")
         }
         menu.menu("refresh");
-    })
-*/
-////////////////////////////////////////////////////////////////////////////////////////////////////
+    });*/
+    //////////////////////////////////////////////////
 
+    //SIMPLE DRAGGABLE:
+    $("#simple-draggable-1").draggable();
+    $("#simple-draggable-2").draggable();
+    //////////////////////////////////////////////////
 
-       
+    //AXIS DRAGGABLE:
+    $("#x1").draggable({axis: "x"});
+    $("#y1").draggable({axis: "y"});
+    //////////////////////////////////////////////////
+
+     //RANGE SLIDER
+     $("#spinner-range-1-about").slider({range: true, values: [25, 75]});
+     $("#spinner-range-min-1-about").slider({range: "min", value: 25});
+     $("#spinner-range-max-1-about").slider({range: "max", value: 75});
+     //////////////////////////////////////////////////
+ 

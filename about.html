@@ -28,7 +28,7 @@
                     </button>
                     <a class="navbar-brand" href="#"><img src="./james.jpg" width="40" height="41">LOGO</a>
                     <div class="collapse navbar-collapse" id="Navbar">
-                        <h5 id="txt" class="nav-item active nav-link offset-3"></h5>
+                        <h1 id="txt" class="nav-item active nav-link offset-3"></h1>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item p-2"><a class="navbar-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
                             <li class="nav-item p-2"><a class="navbar-link" href="#"><span class="fa fa-list fa-lg"></span> About Us</a></li>
@@ -46,8 +46,9 @@
                 </header>
             <div class="container">
                     <h3>Our History...</h3>
-                <div class="row row-content">
+                <div class="row row-header">
                     <div class="col-12 col-sm-4">
+                        <h5>Collapse According</h5>
                         <div id="accordion-1-about">
                             <h4>Ghostbusters <i class="fa fa-angle-down"></i></h4>
                             <div>
@@ -64,6 +65,7 @@
                         </div>                        
                     </div>
                     <div class="col-12 col-sm-4">
+                        <h5>Close According</h5>
                         <div id="accordion-2-about">
                             <h4>Ghostbusters <i class="fa fa-angle-down"></i></h4>
                             <div>
@@ -80,6 +82,7 @@
                         </div>                        
                     </div>
                     <div class="col-12 col-sm-4">
+                        <h5>Button According</h5>
                         <div id="accordion-3-about">
                             <h4>One</h4>
                             <p>The first game...</p>
@@ -90,9 +93,9 @@
                         <button id="btn-2-about">Two</button>
                     </div>
                 </div>
-                    <h3>Get more from us...</h3>
-                <div class="row row-heading">
-                    <div class="col-12 col-sm-6">
+                <div class="row row-header">
+                        <div class="col-12 col-sm-6">
+                        <h5>According New Tabs</h5>
                         <div id="accordion-4-about"></div>
                         <form id="form-1-about">
                             <label for="header-1-about"></label><br>
@@ -100,56 +103,71 @@
                             <label for="content-1-about"></label><br>
                             <textarea id="content-1-about" placeholder="What is on your mind..."required></textarea>
                             <br>
-                            <button>New Tab</button>
+                            <button class="btn btn-primary">New Tab</button>
                         </form>
                     </div>
-                    <div class="col-12 col-sm-6 staffing">
-                        <div id="movie-list" class="ui-widget">
-                            <h2>Movie List</h2>
-                            <ul>
-                                <li><a href="movie.php?movie=ghostbusters">Ghostbusters</a></li>
-                                <li><a href="movie.php?movie=titanic">Titanic</a></li>
-                                <li><a href="movie.php?movie=top_gun">Top Gun</a></li>
-                            </ul>
+                    <div class="col-12 col-sm-6">
+                        <h5>Progress Bar</h5>
+                        <div id="progressbar-1-about">
+                            <div id="progressbar-label-1-about">0%</div>
                         </div>
+                        <button id="progressbarBtn">Click</button>
                     </div>
                 </div>
+<!----
+                <div class="row row-header">
+                    <div class="">
+                        <div id="movie-list-2" class="ui-widget">
+                            <h5>Menu Previewing</h5>
+                            <ul>
+                                <li> <a href="./chapter-04/movie.php?movie=ghostbusters">Ghostbusters</a></li>
+                                <li><a href="./chapter-04/movie.php?movie=titanic">Titanic</a></li>
+                                <li><a href="./chapter-04/movie.php?movie=top_gun">Top Gun</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div id="tabs">
+                            <ul>
+                                <li><a href="#intro-2">Introduction</a></li>
+                            </ul>
+                        </div>
+                        <div id="intro-2"> Welcome. select movies and their information will appear here.</div>
+                    </div>
+                </div>
+---->
                 <div class="row row-header">
                     <div class="col-12 col-sm-4">
+                        <h5>MENU</h5>
                         <ul id="menu-1-about">
-                            <span class="fa fa-star fa-sm"></span> Star
-                            
-                            <li>Options
+                            <span class="fa fa-star fa-sm">Hover here:
                                 <ul>
                                     <li>One</li>
                                     <li>Two</li>
                                 </ul>
-                            </li>
+                            </span>
                         </ul>
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <div id="composer-1-about">
-                            <h3>Message</h3>
-                            <textarea id="message-1-about"></textarea>
+                    <div class="col-12 col-sm-4">
+                        <h5>DELEGATED TOOTIPS</h5>
+                        <input id="tooltip-1-about" placeholder="Hover here" title="This is a tooltip"/>
+                    </div>
+                    <div class="col-12 col-sm-4" id="fault-c">
+                        <h5 id="fault-h5">MESSAGE COMPOSER</h5>
+                        <div id="message-composer-1">
+                        <textarea id="textarea-1-about" placeholder="Input your message:"></textarea>
                         </div>
-                        <ul id="menu-2-about">
-                            <li>
-                                <span class="ui-icon fa fa-folder-open-o"></span> Load
-                            </li>
-                            <li class="ui-state-disabled" id="save-option-1">
-                                <span class="fa fa-save fa-sm"></span> Save
-                            </li>
+
+                        <ul id="menu-1-about">
+                            <li id="li-1-about"><span class="ui-icon ui-icon-folder-open"></span>Load</li>
+                            <li class="ui-state-disabled" id="save-option-1"><span class="ui-icon ui-icon-disk"></span>Save</li>
                             <li></li>
-                            <li>
-                                <span class="fa fa-cog fa-sm"></span> Settings
-                            </li>
-                            <li>
-                                <span class="fa fa-sm fa-trash"></span> Delete
-                            </li>
+                            <li><span class="ui-icon ui-icon-gear"></span>Settings</li>
+                            <li></li>
+                            <li><span class="ui-icon ui-icon-trash"></span>Delete</li>
                         </ul>
 
                         <div id="confirmDelete-1-about">
-                            <p>Are you <strong>sure</strong> you want to delete your message</p>
+                            <p>Are you <strong>sure</strong> you want to delete your message?</p>
                         </div>
 
                         <div id="settingsDialog-1-about">
@@ -157,9 +175,18 @@
                             <div id="slider-1-about"></div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-2">
-                        <div></div>
+                </div>
+                <div class="row row-header">
+                    <div class="col-12 col-sm-4" id="fault-c">
+                        <h5 id="fault-h5">SIMPLE DRAGGABLE</h5>
+                        <div id="simple-draggable-1"></div>
+                        <div id="simple-draggable-2"></div>
                     </div>
+                    <div class="col-12 col-sm-4">
+                            <div id="x1">X-Axis</div>
+                            <div id="y1">Y-Axis</div>
+                    </div>
+                    <div class="col-12 col-sm-4"></div>
                 </div>
             </div>
         </main>
@@ -176,7 +203,7 @@
                             </ul>
                         </div>
                         <div class="col-8 col-sm-4">
-                            <h5>Our Address</h5>
+                            <h4>Our Address</h4>
                             <address>
                                 Osidade Rd<br>
                                 Kwame Nkrumah circle<br>
@@ -209,10 +236,7 @@
         <script src="./js/jquery.js"></script>
         <script src="./js/jquery-ui.js"></script>
         <script src="./trials.js"></script>
-        <script src=""></script>
-        <script src=""></script>
-        <script src=""></script>
-        <script src=""></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- endbuld -->
     </body>
-    </html>
+    </html> 

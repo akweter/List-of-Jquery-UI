@@ -12,7 +12,7 @@
 	}
 }(function( datepicker ) {
 
-datepicker.regional['en-AU'] = {
+datepicker.regional['en-AU'] = { 
 	closeText: 'Done',
 	prevText: 'Prev',
 	nextText: 'Next',
